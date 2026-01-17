@@ -1,116 +1,179 @@
-<h1>🚀 ProjectVault</h1>
-    <p>
-      <strong>ProjectVault</strong> is a modern admin dashboard built using
-      <span class="tag">HTML</span>
-      <span class="tag">CSS</span>
-      <span class="tag">JavaScript</span>
-      <span class="tag">PHP</span>
-      <span class="tag">MySQL</span>
-      for managing projects and categories in one place.
-    </p>
 
-    <p>
-      This project does <strong>not include a login system</strong> by design and is ideal
-      for learning full-stack CRUD concepts with clean UI.
-    </p>
+# 🚀 ProjectVault
 
-    <h2>✨ Features</h2>
-    <ul>
-      <li>Dashboard with total projects & categories</li>
-      <li>Category management (Create, View, Delete)</li>
-      <li>Project management (Create, Edit, Delete)</li>
-      <li>Assign projects to categories</li>
-      <li>Copy project links to clipboard</li>
-      <li>Profile settings with avatar upload</li>
-      <li>Dark / Light mode (persistent)</li>
-      <li>Responsive layout (mobile friendly)</li>
-    </ul>
+**ProjectVault** is a modern admin dashboard built with **HTML, CSS, JavaScript, PHP, and MySQL** to manage projects and categories in one place.  
+It is designed with a clean UI, dark/light mode support, and full CRUD functionality — **without a login system** (by design).
 
-    <h2>🧱 Tech Stack</h2>
-    <ul>
-      <li><strong>Frontend:</strong> HTML5, CSS3, Vanilla JavaScript</li>
-      <li><strong>Backend:</strong> PHP (procedural)</li>
-      <li><strong>Database:</strong> MySQL</li>
-      <li><strong>Server:</strong> XAMPP (Apache + MySQL)</li>
-    </ul>
+---
 
-    <h2>📂 Project Structure</h2>
-    <pre>
-ProjectVault/
-├── assets/
-│   ├── backend/
-│   │   ├── categories/
-│   │   ├── projects/
-│   │   └── profile.php
-│   ├── css/
-│   ├── js/
-│   └── img/
-├── config/db.php
-├── includes/
-│   ├── sidebar.php
-│   └── navbar.php
-├── dashboard.php
-├── categories.php
-├── projects.php
-├── settings.php
-├── projectvault.sql
-└── README.html
-    </pre>
+## ✨ Features
 
-    <h2>🛠️ Installation (XAMPP)</h2>
+- 📊 **Dashboard Overview**
+  - Total Projects count
+  - Total Categories count
 
-    <h3>1️⃣ Move Project to htdocs</h3>
-    <pre>C:/xampp/htdocs/ProjectVault</pre>
+- 📁 **Categories Management**
+  - Create categories
+  - View all categories
+  - Delete categories
+  - ⚠️ Cascade delete warning (projects linked to a category are deleted automatically)
 
-    <h3>2️⃣ Start XAMPP</h3>
-    <ul>
-      <li>Start Apache</li>
-      <li>Start MySQL</li>
-    </ul>
+- 📦 **Projects Management**
+  - Create projects
+  - Assign projects to categories
+  - Edit projects
+  - Delete projects
+  - Copy project links to clipboard
 
-    <h3>3️⃣ Create Database</h3>
-    <pre>
-Database name: projectvault
-    </pre>
+- ⚙️ **Settings Page**
+  - Update profile name, email, profession
+  - Upload profile avatar
+  - Data stored in database
 
-    <h3>4️⃣ Import SQL File</h3>
-    <p>Open phpMyAdmin and import:</p>
-    <pre>projectvault.sql</pre>
+- 🌙 **Dark / Light Mode**
+  - Persistent theme using `localStorage`
 
-    <h3>5️⃣ Configure Database Connection</h3>
-    <pre>
+- 📱 **Responsive Design**
+  - Sidebar collapses on mobile
+  - Mobile menu support
+
+---
+
+## 🧱 Tech Stack
+
+- **Frontend**
+  - HTML5
+  - CSS3 (Custom styling, gradients)
+  - Vanilla JavaScript
+
+- **Backend**
+  - PHP (Procedural)
+  - MySQL
+
+- **Server**
+  - XAMPP (Apache + MySQL)
+
+---
+
+## 📂 Project Structure
+
+---
+
+## 🛠️ Installation (XAMPP)
+
+Follow these steps carefully 👇
+
+### 1️⃣ Clone or Download the Project
+
+```bash
+git clone https://github.com/your-username/ProjectVault.git
+
+OR download ZIP and extract.
+```
+
+### 2️⃣ Move Project to htdocs
+
+```bash
+C:/xampp/htdocs/
+```
+
+### 3️⃣ Start XAMPP
+
+Open XAMPP Control Panel
+
+Start:
+
+✅ Apache
+
+✅ MySQL
+
+### 4️⃣ Create Database
+
+``` bash
+Open phpMyAdmin
+
+http://localhost/phpmyadmin
+```
+
+Create a database:
+``` bash
+projectvault
+```
+
+### 5️⃣ Import Database
+
+- Select projectvault database
+- Click Import
+- Choose file: 
+```bash
+projectvault.sql
+```
+- Click Go
+
+✅ Tables + dummy data will be created automatically.
+
+### 6️⃣ Configure Database Connection
+
+Open:
+```
+config/db.php
+```
+
+Make sure credentials match your setup:
+```
+<?php
 $conn = new mysqli("localhost", "root", "", "projectvault");
-    </pre>
 
-    <h3>6️⃣ Run the Project</h3>
-    <pre>http://localhost/ProjectVault/dashboard.php</pre>
+if ($conn->connect_error) {
+    die("Database connection failed: " . $conn->connect_error);
+}
+```
+### 7️⃣ Run the Project
 
-    <h2>📌 Important Notes</h2>
-    <ul>
-      <li>No login system included</li>
-      <li>Deleting a category deletes related projects (CASCADE)</li>
-      <li>Theme mode is saved using localStorage</li>
-      <li>Modals are reusable across pages</li>
-    </ul>
+Open in browser:
+```
+http://localhost/ProjectVault/
+``` 
+📌 Notes
+- ❌ No authentication / login system (intentionally excluded)
+- 🗑️ Deleting a category will also delete its projects (MySQL ON DELETE CASCADE)
+- 🌓 Dark mode state is preserved across pages
+- 🧩 All modals are reusable (Dashboard & Pages)
+### 🧪 Dummy Data
 
-    <div class="note">
-      <strong>Tip:</strong> You can reset everything anytime by re-importing
-      <code>projectvault.sql</code>.
-    </div>
+The repository includes:
+- projectvault.sql
 
-    <h2>🚧 Possible Improvements</h2>
-    <ul>
-      <li>User authentication</li>
-      <li>Search & pagination</li>
-      <li>Export projects (CSV / PDF)</li>
-      <li>REST API</li>
-    </ul>
+- Pre-filled categories
 
-    <h2>📜 License</h2>
-    <p>
-      This project is open-source and free to use for learning and personal projects.
-    </p>
+- Pre-filled projects
 
-    <footer>
-      Designed & Developed with ❤️ — <strong>ProjectVault</strong>
-    </footer>
+- Default profile data
+
+You can reset anytime by re-importing the SQL file.
+
+### 🚧 Future Improvements (Optional)
+
+- User authentication
+
+- Pagination & search
+
+- Role-based access
+
+- REST API
+
+- Export projects (CSV / PDF)
+
+### 📜 License
+
+This project is open-source and free to use for learning, personal projects, or extensions.
+
+### 💙 Credits
+
+Designed & Developed by ProjectVault
+UI inspiration from modern dashboard layouts (Dribbble)
+
+⭐ If you like this project, give it a star!
+
+
+
