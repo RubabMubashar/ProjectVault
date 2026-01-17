@@ -56,7 +56,7 @@ It is designed with a clean UI, dark/light mode support, and full CRUD functiona
 ---
 
 ## 📂 Project Structure
-![App Screenshot](https://github.com/RubabMubashar/ProjectVault/code.png)
+![App Screenshot](https://github.com/RubabMubashar/ProjectVault/blob/main/code.png)
 
 ---
 
