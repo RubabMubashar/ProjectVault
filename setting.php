@@ -24,7 +24,7 @@ require_once "includes/profile-data.php";
 
         <nav class="sidebar-menu">
             <!-- Active item -->
-            <a href="dashboard.php" class="menu-item">
+            <a href="index.php" class="menu-item">
                 <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 24 24">
                     <path fill="currentColor" d="M21 21h-8v-6h8v6Zm-10 0H3V11h8v10Zm10-8h-8V3h8v10ZM11 9H3V3h8v6Z" />
                 </svg>
@@ -141,7 +141,7 @@ require_once "includes/profile-data.php";
         </div>
 
         <nav class="sidebar-menu">
-            <a href="dashboard.php" class="menu-item">
+            <a href="index.php" class="menu-item">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                     <path fill="currentColor" d="M21 21h-8v-6h8v6Zm-10 0H3V11h8v10Zm10-8h-8V3h8v10ZM11 9H3V3h8v6Z" />
                 </svg>
