@@ -171,8 +171,7 @@ This project is open-source and free to use for learning, personal projects, or 
 
 ### 💙 Credits
 
-Designed & Developed by ProjectVault
-UI inspiration from modern dashboard layouts (Dribbble)
+Designed & Developed by <a href="https://rubabmubasharportfolio.site/">Rubab Mubashar</a>
 
 ⭐ If you like this project, give it a star!
 
